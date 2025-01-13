@@ -1,0 +1,36 @@
+"""
+LA SUCESIÓN DE FIBONACCI
+Escribe un programa que imprima los 50 primeros números de la sucesión
+de Fibonacci empezando en 0.
+- La serie Fibonacci se compone por una sucesión de números en
+  la que el siguiente siempre es la suma de los dos anteriores.
+  0, 1, 1, 2, 3, 5, 8, 13...
+"""
+
+# Solución 1
+a=0
+b=1
+
+digitos=0
+while digitos<=50:
+    print(a)
+    print(b)
+    c=a+b
+    print(c)
+    a=c+b
+    b=a+c
+    digitos= digitos+3
+
+# Solución 2
+def fibonacci():
+
+    prev = 0
+    next = 1
+
+    for index in range(0, 50):
+        print(prev)
+        fib = prev + next
+        prev = next
+        next = fib
+
+fibonacci()
